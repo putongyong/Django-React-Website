@@ -10,6 +10,10 @@ from rest_framework.response import Response
 from api.models import Blog
 from api.serializers import BlogSerializer
 
+def front(request):
+    context = { }
+    return render(request, "index.html", context)
+
 @api_view(['GET', 'POST'])
 def blog_list(request, format=None):
     """
