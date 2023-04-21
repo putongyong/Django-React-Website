@@ -1,7 +1,7 @@
 function Header(){
     return (
         <h1 className="Header">
-          This is a Header
+          Double X Blog
         </h1>
       );
 }
