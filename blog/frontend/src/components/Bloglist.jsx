@@ -1,20 +1,32 @@
 import React, { useState, useEffect } from 'react';
 
 function Bloglist() {
-    const [blog,setBlog]=useState([{id: 1, title:"test", text:"testing"}])
+    const [data,setData]=useState(null)
 
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/api/blogs")
-        .then(response => response.json())
-        .then(data => setBlog(data))
-        .then(console.log(blog))
+      async function fetchDatas() {
+        const response = await fetch("http://127.0.0.1:8000/api/blogs")
+        const datas = await response.json();
+        setData(datas);
+      }
+      fetchDatas()
       },[])
 
-  return (
-    <h1>
-        Bloglist
-    </h1>
-  );
+      if (data) {
+        return (
+          <div>
+            <ul>            
+            {data.map((item)=>(
+               <li key={item.id}>
+                <h1>{item.title}</h1>
+                <p>{item.text}</p>
+               </li>
+            ))}
+            </ul>          
+          </div>
+        );
+      };
+
 }
 
 export default Bloglist;
