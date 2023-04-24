@@ -19,6 +19,6 @@ from api.views import front
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('api.urls')),
-    path("", front, name="front"),
+    path('api/', include('api.urls')),
+    path('', front, name="front"),
 ]
