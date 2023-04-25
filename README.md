@@ -13,3 +13,5 @@ cd Django-React-Website
 cd blog
 
 python manage.py runserver
+
+In addition, you can check out my daily updated routine by following my Github repository.
