@@ -15,13 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from api.views import front
-#from rest_framework import routers
+from rest_framework.routers import SimpleRouter
+from api.views import front, BlogViewSet
 
-#router = routers.SimpleRouter()
+router = SimpleRouter()
+router.register('blogs', BlogViewSet, basename='blog')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),
-    #path('api/', include((router.urls, 'api'))),
-    path('', front, name="front"),
+    path('', front, name='front'),
+    path('api/', include(router.urls)),
 ]

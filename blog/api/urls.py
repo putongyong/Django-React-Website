@@ -1,10 +1,12 @@
-from django.urls import path
+from django.urls import path, include
 from rest_framework.urlpatterns import format_suffix_patterns
+from rest_framework.routers import SimpleRouter
 from api import views
 
-urlpatterns = [
-    path('blogs/', views.blog_list),
-    path('blogs/<int:pk>/', views.blog_detail),
-]
+router = SimpleRouter()
 
-urlpatterns = format_suffix_patterns(urlpatterns)
+router.register(r'blogs', views.BlogViewSet,basename="blog")
+
+urlpatterns = [
+    path('', include(router.urls)),
+]
