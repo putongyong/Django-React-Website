@@ -25,6 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('', front, name='front'),
-    re_path(".*", front, name='front'), 
+    re_path(".*", front, name='front'), #This should be at the last place because of urls logic, otherwise it would read the repath url before reading other urls
     #path("__reload__", include("django_browser_reload.urls")),
 ]
