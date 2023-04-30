@@ -3,8 +3,10 @@ import icon from './images/favicon.ico';
 import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Navbar from './components/Navbar';
+import NavContainer from './components/NavContainer';
 import Bloglist from './components/Bloglist';
+import Contact from './components/Contact';
+import About from './components/About';
 
 function App() {
 
@@ -17,9 +19,11 @@ function App() {
 
   return (
     <div className="App"> 
-      <Navbar/>
+      <NavContainer/>
       <Header/>
       <Bloglist/>
+      <About/>
+      <Contact/>
       <Footer/>
     </div>
   );

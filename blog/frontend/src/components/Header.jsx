@@ -1,6 +1,6 @@
 function Header(){
     return (
-        <h1 className="Header">
+        <h1 className="Header" id="Header">
           Double X Blog
         </h1>
       );

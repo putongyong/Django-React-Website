@@ -14,7 +14,7 @@ function Bloglist() {
 
       if (data) {
         return (
-          <div>
+          <div className="Bloglist" id="Bloglist">
             <ul>            
             {data.map((item)=>(
                <li key={item.id}>
