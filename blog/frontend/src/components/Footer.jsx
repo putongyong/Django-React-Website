@@ -3,7 +3,7 @@ function Footer() {
     <footer className="Footer" id="Footer">
       <div>
         <p id="Footer-text">
-          Copyright © {new Date().getFullYear()}
+        All rights reserved © {new Date().getFullYear()} Yong XIE
         </p>
       </div>
     </footer>
