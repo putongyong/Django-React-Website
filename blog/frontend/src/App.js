@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import NavContainer from './components/NavContainer';
 import Bloglist from './components/Bloglist';
 import About from './components/About';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Header/>
         <Bloglist/>
         <About/>
+        <Contact/>
         <Footer/>        
       </div>
     </div>
