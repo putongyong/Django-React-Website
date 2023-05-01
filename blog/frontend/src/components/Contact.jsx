@@ -40,14 +40,10 @@ function Contact() {
             <Form.Control as="textarea" name="message" placeholder="Enter your message" rows={5} required />
             </Col>
         </Form.Group>
-
-        <Form.Group as={Row} className="mb-3 justify-content-center">
-            <Col sm={{ span: 10, offset: 2 }}>
-              <input type="hidden" name="redirect" value="https://web3forms.com/success"/>
-              <Button variant="primary" type="submit">Submit</Button>
-            </Col>
-        </Form.Group>
-
+        
+        <input type="hidden" name="redirect" value="https://web3forms.com/success"/>
+        <Button variant="primary" type="submit">Submit</Button>
+        
         </Form>
       </Container>
     </div>
