@@ -1,3 +1,14 @@
 .App {
   text-align: center;
 }
+
+.Main {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.About {
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+}

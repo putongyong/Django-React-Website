@@ -1,7 +1,7 @@
 function Header(){
     return (
         <h1 className="Header" id="Header">
-          Double X Blog
+          Yong XIE
         </h1>
       );
 }

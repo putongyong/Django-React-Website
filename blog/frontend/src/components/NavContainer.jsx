@@ -1,26 +1,26 @@
-function NavContainer(){
-    return (
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#Header">Double X</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#Bloglist">Bloglist</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#About">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#Contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-      );
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
+function NavContainer() {
+  return (
+    <div className='NavContainer'>
+      <Navbar bg="body-tertiary" expand="lg">
+        <Container>
+          <Navbar.Brand href="/">Yong XIE</Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarNav" />
+          <Navbar.Collapse id="navbarNav">
+            <Nav className="me-auto">
+              <Nav.Link href="#Header">Home</Nav.Link>
+              <Nav.Link href="#Bloglist">Bloglist</Nav.Link>
+              <Nav.Link href="#About">About</Nav.Link>
+              <Nav.Link href="#Footer">Contact Me</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </div>
+  );
 }
+
 export default NavContainer;
